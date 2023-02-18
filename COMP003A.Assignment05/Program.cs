@@ -10,7 +10,11 @@ namespace COMP003A.Assignment05
         static void Main(string[] args)
         {
             PrintSeparator("Triangle Section");
-
+            /// <summary>
+            /// Gets user input
+            /// </summary>
+            /// <param  name="char1">Character input</param>
+            /// <param name="num1">Integer input</param>
             Console.Write("Enter a single character: ");
                 char char1 = Convert.ToChar(Console.ReadLine());
             Console.Write("Enter a positive whole number: ");
