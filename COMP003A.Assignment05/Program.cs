@@ -28,7 +28,7 @@ namespace COMP003A.Assignment05
             /// <summary>
             /// Calls Favorite Characters Method
             /// </summary>
-            PrintSeparator("Favorite Characters Section");
+            PrintSeparator("Favorite Characters Section"); //-----------------------<| FIXED lines 31-36
             CharacterInfo("Spawn", 1992);
             CharacterInfo("Ted Mosby", 1978);
             CharacterInfo("Ultimate Warrior", 1959);
@@ -70,7 +70,7 @@ namespace COMP003A.Assignment05
                 char1 += inputCharacter;
             }
 
-            for (int i = size - 1; i >= 0; i--) //----------<| fixed!
+            for (int i = size - 1; i >= 0; i--) //----------------------------------<| FIXED lines 73-76
             {                             
                 char1 = char1.Substring(0, i);
                 Console.WriteLine(char1);
@@ -92,7 +92,7 @@ namespace COMP003A.Assignment05
         /// </summary>
         /// <param name="name"></param>
         /// <param name="birthYear"></param>
-        static void CharacterInfo(string name, int birthYear)
+        static void CharacterInfo(string name, int birthYear) //--------------------<| FIXED lines 95-98
         {
             birthYear = AgeCalculator(birthYear);
             Console.WriteLine($"{name} turns {birthYear} this year!");
