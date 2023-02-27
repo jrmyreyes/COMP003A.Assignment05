@@ -29,11 +29,11 @@ namespace COMP003A.Assignment05
             /// Calls Favorite Characters Method
             /// </summary>
             PrintSeparator("Favorite Characters Section");
-            CharacterInfo("Spawn", AgeCalculator(1992));
-            CharacterInfo("Ted Mosby", AgeCalculator(1978));
-            CharacterInfo("Ultimate Warrior", AgeCalculator(1959));
-            CharacterInfo("Marvin the Martian", AgeCalculator(1948));
-            CharacterInfo("Himura Kenshin", AgeCalculator(1849));
+            CharacterInfo("Spawn", 1992);
+            CharacterInfo("Ted Mosby", 1978);
+            CharacterInfo("Ultimate Warrior", 1959);
+            CharacterInfo("Marvin the Martian", 1948);
+            CharacterInfo("Himura Kenshin", 1849);
         }
 
         /// <summary>
@@ -70,10 +70,10 @@ namespace COMP003A.Assignment05
                 char1 += inputCharacter;
             }
 
-            for (int i = size; i > 0; i--) //----------<| not working as intended
-            {             
+            for (int i = size - 1; i >= 0; i--) //----------<| fixed!
+            {                             
+                char1 = char1.Substring(0, i);
                 Console.WriteLine(char1);
-                char1.Substring(i, 1);
             }
         }
 
@@ -94,6 +94,7 @@ namespace COMP003A.Assignment05
         /// <param name="birthYear"></param>
         static void CharacterInfo(string name, int birthYear)
         {
+            birthYear = AgeCalculator(birthYear);
             Console.WriteLine($"{name} turns {birthYear} this year!");
         }
     }
